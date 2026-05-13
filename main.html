@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Vega Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- <script src="vega_lite_vis.js"></script> -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Exploring Australia's Fast Food and Health Trends </title>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="main-header">
+
+        <!-- Left : Australia Flag -->
+        <div class="header-left">
+            <img src="images/ausFlag.png" alt="Australia Flag">
+        </div>
+
+        <!-- Center : Dashboard Title -->
+        <div class="header-center">
+            <h1>
+                Exploring Australia's Fast Food and Health Trends
+            </h1>
+        </div>
+
+        <!-- Right : AIHW Logo -->
+        <div class="header-right">
+            <img src="images/aihw.png" alt="AIHW Logo">
+        </div>
+
+    </header>
+
+    <!-- ================= INTRO OVERVIEW SECTION ================= -->
+    <section class="overview-section">
+
+    <!-- 1. Burger Image -->
+    <div class="overview-box burger-image-box">
+        <img src="images/hamburgerMan.jpg" alt="Burger illustration">
+    </div>
+
+    <!-- 2. Introduction Text -->
+    <div class="overview-box intro-text-box">
+        <h2>Introduction</h2>
+        <p>
+            This dashboard explores the relationship between fast food habits,
+            obesity patterns, and physical health among Australians.
+        </p>
+    </div>
+
+    <!-- 3. Dot Map Placeholder -->
+    <div class="overview-box dotmap-box">
+        <h3>Fast Food Restaurant Map</h3>
+
+        <!-- Dot map graph will be inserted here later -->
+        <div id="dot-map"></div>
+    </div>
+
+    <!-- 4. Paragraph Text -->
+    <div class="overview-box paragraph-box">
+        <p>
+            Fast food availability and consumption can influence lifestyle
+            behaviours, dietary choices, and long-term health outcomes.
+        </p>
+    </div>
+
+    <!-- 5. Pie Chart Placeholder -->
+    <div class="overview-box piechart-box">
+        <h3>Fast Food Type Share</h3>
+
+        <!-- Pie chart will be inserted here later -->
+        <div id="pie-chart"></div>
+    </div>
+
+    </section>
+
+</body>
+
+</html>
