@@ -42,49 +42,69 @@
 
     </header>
 
-    <!-- ================= INTRO OVERVIEW SECTION ================= -->
+<!-- ================= INTRO OVERVIEW SECTION ================= -->
     <section class="overview-section">
 
-    <!-- 1. Burger Image -->
-    <div class="overview-box burger-image-box">
-        <img src="images/hamburgerMan.jpg" alt="Burger illustration">
+    <!-- LEFT HALF: Image + Introduction -->
+    <div class="overview-left">
+
+        <!-- Burger Image -->
+        <div class="burger-image-box">
+            <img src="images/hamburgerMan.png" alt="Burger illustration">
+        </div>
+
+        <!-- Introduction Text -->
+        <div class="intro-text-box">
+            <h3>Introduction</h3>
+            <p>
+                This dashboard explores the relationship between fast food habits,
+                obesity patterns, and physical health among Australians.
+            </p>
+        </div>
+
     </div>
 
-    <!-- 2. Introduction Text -->
-    <div class="overview-box intro-text-box">
-        <h2>Introduction</h2>
-        <p>
-            This dashboard explores the relationship between fast food habits,
-            obesity patterns, and physical health among Australians.
-        </p>
-    </div>
-
-    <!-- 3. Dot Map Placeholder -->
-    <div class="overview-box dotmap-box">
+    <!-- RIGHT HALF: Dot Map -->
+    <div class="overview-right">
         <h3>Fast Food Restaurant Map</h3>
 
         <!-- Dot map graph will be inserted here later -->
         <div id="dot-map"></div>
     </div>
 
-    <!-- 4. Paragraph Text -->
-    <div class="overview-box paragraph-box">
-        <p>
-            Fast food availability and consumption can influence lifestyle
-            behaviours, dietary choices, and long-term health outcomes.
-        </p>
-    </div>
+    </section>
 
-    <!-- 5. Pie Chart Placeholder -->
-    <div class="overview-box piechart-box">
-        <h3>Fast Food Type Share</h3>
+<!-- ================= FAST FOOD CONSUMPTION SECTION ================= -->
+    <section class="fastfood-section-part1">
+
+    <!-- Left: Pie Chart -->
+    <div class="fastfood-chart-box">
+        <h2>Fast Food Type Share</h2>
 
         <!-- Pie chart will be inserted here later -->
         <div id="pie-chart"></div>
     </div>
 
+    <!-- Middle: Text -->
+    <div class="fastfood-text-box">
+        <h2>Fast Food Consumption</h2>
+        <p>
+            Fast food choices can reflect consumer preferences, affordability,
+            convenience, and lifestyle habits across Australia.
+        </p>
+    </div>
+
+    <!-- Right: Horizontal Bar Chart -->
+    <div class="fastfood-chart-box">
+        <h2>Fast Food Spending by State</h2>
+
+        <!-- Horizontal bar chart will be inserted here later -->
+        <div id="bar-chart"></div>
+    </div>
+
     </section>
 
+    <script src="js/fastFoodMap_vg.js"></script>
 </body>
 
 </html>

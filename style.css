@@ -1,13 +1,20 @@
 /* =========================
    GENERAL PAGE STYLING
 ========================= */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     padding: 0;
 
-    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f8f5ef;
 }
 
@@ -85,79 +92,129 @@ body {
     height: 350px;
 
     display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    /* image small, intro smaller, map bigger, paragraph smaller, pie bigger */
-    grid-template-columns: 0.9fr 1.1fr 2fr 1fr 1.8fr;
+    gap: 30px;
 
-    gap: 18px;
-
-    padding: 20px 60px;
+    padding: 30px 60px;
 
     border-bottom: 3px solid #4b2e83;
 
     background-color: #f8f5ef;
 
     box-sizing: border-box;
+
+    overflow: hidden;
 }
 
-/* Remove visible boxes */
-.overview-box {
-    border: none;
+.overview-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    padding: 0;
+    gap: 5px;
+
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.overview-right {
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.burger-image-box {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.burger-image-box img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.intro-text-box {
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.intro-text-box h3,
+.overview-right h3 {
+    margin: 0 0 15px 0;
+
+    color: #4b2e83;
+
+    font-size: 20px;
+}
+
+.intro-text-box p {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+}
+
+#dot-map {
+    width: 100%;
+    height: 280px;
+}
+
+/* =========================
+   FAST FOOD CONSUMPTION SECTION
+========================= */
+
+.fastfood-section-part1 {
+    height: 350px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 30px;
+
+    padding: 30px 60px;
+
+    border-bottom: 3px solid #4b2e83;
+
+    background-color: #f8f5ef;
 
     box-sizing: border-box;
 
     overflow: hidden;
 }
 
-/* Burger image section */
-.burger-image-box {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    height: 100%;
-}
-
-.burger-image-box img {
-    width: 100%;
-
+.fastfood-chart-box,
+.fastfood-text-box {
     height: 100%;
 
-    object-fit: cover;
+    overflow: hidden;
 }
 
-/* Text styling */
-.overview-box h2,
-.overview-box h3 {
-    margin: 0 0 10px 0;
+.fastfood-section-part1 h2 {
+    margin: 0 0 15px 0;
 
     color: #4b2e83;
-}
 
-.overview-box h2 {
     font-size: 26px;
 }
 
-.overview-box h3 {
-    font-size: 20px;
-}
-
-.overview-box p {
+.fastfood-section-part1 p {
     margin: 0;
 
-    font-size: 18px;
+    font-size: 20px;
 
     line-height: 1.35;
 }
 
-/* Chart placeholders */
-#dot-map,
-#pie-chart {
+#pie-chart,
+#bar-chart {
     width: 100%;
 
-    height: 280px;
+    height: 260px;
 }

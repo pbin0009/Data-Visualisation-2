@@ -1,0 +1,96 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 620,
+  "height": 280,
+
+  "title": null,
+
+  "projection": {
+    "type": "mercator",
+    "center": [134, -28],
+    "scale": 430
+  },
+
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/vega/vega-datasets/main/data/world-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+
+      "transform": [
+        {
+          "filter": "datum.id == 36"
+        }
+      ],
+
+      "mark": {
+        "type": "geoshape",
+        "fill": "#efe6d6",
+        "stroke": "#4b2e83",
+        "strokeWidth": 0.8
+      }
+    },
+
+    {
+      "data": {
+        "url": "data/FastFoodAus.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+
+      "mark": {
+        "type": "circle",
+        "size": 9,
+        "color": "#d97706",
+        "opacity": 0.28
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "geometry.coordinates[0]",
+          "type": "quantitative"
+        },
+
+        "latitude": {
+          "field": "geometry.coordinates[1]",
+          "type": "quantitative"
+        },
+
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "type": "nominal",
+            "title": "Restaurant"
+          },
+
+          {
+            "field": "properties.brand",
+            "type": "nominal",
+            "title": "Brand"
+          },
+
+          {
+            "field": "properties.cuisine",
+            "type": "nominal",
+            "title": "Cuisine"
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "background": "#f8f5ef",
+
+    "view": {
+      "stroke": null
+    }
+  }
+}
