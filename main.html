@@ -11,7 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-    <!-- <script src="vega_lite_vis.js"></script> -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -19,7 +18,8 @@
 </head>
 
 <body>
-
+    <script src="js/fastFood_vg.js"></script>
+    
     <!-- ================= HEADER ================= -->
     <header class="main-header">
 
@@ -104,7 +104,37 @@
 
     </section>
 
-    <script src="js/fastFoodMap_vg.js"></script>
+<!-- ================= AUS AND OECD COMPARISON ================= -->
+    <section class="fastfood-section-part2">
+
+    <!-- Left: Lollipop Chart -->
+    <div class="spending-lollipop-box">
+        <h2>Average Monthly Fast Food Spending by State</h2>
+
+        <!-- Lollipop chart will go here later -->
+        <div id="spending-lollipop-chart"></div>
+    </div>
+
+    <!-- Middle: Text Box -->
+    <div class="fastfood-middle-text-box">
+        <h2>Fast Food & Health</h2>
+        <p>
+            Fast food spending and obesity patterns provide insight into how
+            lifestyle, diet, and consumer behaviour may relate to health outcomes
+            in Australia.
+        </p>
+    </div>
+
+    <!-- Right: OECD Bar Chart -->
+    <div class="oecd-bar-box">
+        <h2>Australia vs OECD Average</h2>
+
+        <!-- OECD bar chart will go here later -->
+        <div id="oecd-obesity-chart"></div>
+    </div>
+
+    </section>
+
 </body>
 
 </html>

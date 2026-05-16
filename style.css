@@ -30,7 +30,7 @@ body {
 
     align-items: center;
 
-    padding: 20px 40px;
+    padding: 20px 10px;
 
     height: 60px;
 
@@ -96,7 +96,7 @@ body {
 
     gap: 30px;
 
-    padding: 30px 60px;
+    padding: 15px 20px;
 
     border-bottom: 3px solid #4b2e83;
 
@@ -174,11 +174,11 @@ body {
     height: 350px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.2fr 0.6fr 1.2fr;
 
-    gap: 30px;
+    gap: 10px;
 
-    padding: 30px 60px;
+    padding: 10px 20px;
 
     border-bottom: 3px solid #4b2e83;
 
@@ -201,20 +201,86 @@ body {
 
     color: #4b2e83;
 
-    font-size: 26px;
+    font-size: 18px;
 }
 
 .fastfood-section-part1 p {
     margin: 0;
 
-    font-size: 20px;
+    font-size: 14px;
 
     line-height: 1.35;
 }
 
-#pie-chart,
+#pie-chart {
+    width: 100%;
+    height: 260px;
+}
+
 #bar-chart {
+    width: 100%;
+    height: 260px;
+}
+
+/* =========================
+   FAST FOOD SECTION PART 2
+========================= */
+
+.fastfood-section-part2 {
+    height: 350px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.6fr 1.2fr;
+
+    gap: 30px;
+
+    padding: 10px 20px;
+
+    border-bottom: 3px solid #4b2e83;
+
+    background-color: #f8f5ef;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.spending-lollipop-box,
+.fastfood-middle-text-box,
+.oecd-bar-box {
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.fastfood-section-part2 h2 {
+    margin: 0 0 15px 0;
+
+    color: #4b2e83;
+
+    font-size: 18px;
+}
+
+.fastfood-section-part2 p {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+}
+
+#spending-lollipop-chart {
+
     width: 100%;
 
     height: 260px;
+
+    overflow: hidden;
+}
+
+#oecd-obesity-chart {
+    width: 100%;
+
+    height: 230px;
+    justify-content: center;
 }
