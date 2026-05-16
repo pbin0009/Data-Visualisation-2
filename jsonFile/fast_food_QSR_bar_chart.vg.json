@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 320,
+  "height": 240,
+
+  "data": {
+    "url": "data/consumerBehaviourQSR.csv"
+  },
+
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 4
+  },
+
+  "encoding": {
+    "y": {
+      "field": "Consumer Behaviour",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null,
+      "axis": {
+        "labelFontSize": 11
+      }
+    },
+
+    "x": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "title": "Percentage (%)"
+    },
+
+    "color": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "oranges"
+      },
+      "legend": null
+    },
+
+    "tooltip": [
+      {
+        "field": "Consumer Behaviour",
+        "type": "nominal"
+      },
+      {
+        "field": "Percentage",
+        "type": "quantitative"
+      }
+    ]
+  },
+
+  "config": {
+    "background": "#f8f5ef",
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}
