@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+
+  "width": 320,
+  "height": 220,
+
+  "data": {
+    "url": "data/aus_oecd_obesity_comparison.csv"
+  },
+
+  "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 4,
+    "cornerRadiusTopRight": 4
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "Group",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "labelAngle": -20,
+        "labelFontSize": 8
+      }
+    },
+
+    "y": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "title": "Percentage (%)",
+      "stack": "zero"
+    },
+
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "title": null,
+      "scale": {
+        "range": ["#4b2e83", "#2a9d8f"]
+      },
+      "legend": {
+        "orient": "right"
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "Group",
+        "type": "nominal"
+      },
+      {
+        "field": "Country",
+        "type": "nominal"
+      },
+      {
+        "field": "Percentage",
+        "type": "quantitative"
+      }
+    ]
+  },
+
+  "config": {
+    "background": "#f8f5ef",
+
+    "view": {
+      "stroke": null
+    }
+  }
+}
