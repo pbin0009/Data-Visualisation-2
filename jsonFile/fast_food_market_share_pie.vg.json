@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 280,
+  "height": 240,
+
+  "data": {
+    "url": "data/FastFoodMarketShare.csv"
+  },
+
+  "mark": {
+    "type": "arc",
+    "innerRadius": 45,
+    "outerRadius": 110,
+    "tooltip": true
+  },
+
+  "encoding": {
+    "theta": {
+      "field": "Percentage",
+      "type": "quantitative"
+    },
+
+    "color": {
+      "field": "Type of Product",
+      "type": "nominal",
+      "title": "Fast Food Type"
+    },
+
+    "tooltip": [
+      {
+        "field": "Type of Product",
+        "type": "nominal",
+        "title": "Type"
+      },
+      {
+        "field": "Percentage",
+        "type": "quantitative",
+        "title": "Percentage (%)"
+      }
+    ]
+  },
+
+  "config": {
+    "background": "#f8f5ef",
+    "view": {
+      "stroke": null
+    }
+  }
+}
