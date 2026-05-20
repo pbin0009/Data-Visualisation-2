@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 320,
-  "height": 220,
+  "width": 280,
+  "height": 210,
 
   "data": {
     "url": "data/avgSpendingByState.csv"
@@ -56,9 +56,21 @@
   ],
 
   "config": {
-    "background": "#f8f5ef",
-    "view": {
-      "stroke": null
-    }
+  "background": "#faeab4",
+
+  "view": {
+    "stroke": null
+  },
+
+  "axis": {
+    "labelFont": "Rubik",
+    "titleFont": "Rubik",
+
+    "labelFontSize": 10,
+    "titleFontSize": 14,
+
+    "labelFontWeight": "bold",
+    "titleFontWeight": "bold"
   }
+}
 }

@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 320,
-  "height": 240,
+  "width": 140,
+  "height": 200,
 
   "data": {
     "url": "data/consumerBehaviourQSR.csv"
@@ -20,7 +20,8 @@
       "sort": "-x",
       "title": null,
       "axis": {
-        "labelFontSize": 11
+        "labelFontSize": 11,
+        "labelLimit": 300
       }
     },
 
@@ -52,15 +53,21 @@
   },
 
   "config": {
-    "background": "#f8f5ef",
+  "background": "#faeab4",
 
-    "view": {
-      "stroke": null
-    },
+  "view": {
+    "stroke": null
+  },
 
-    "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial"
-    }
+  "axis": {
+    "labelFont": "Rubik",
+    "titleFont": "Rubik",
+
+    "labelFontSize": 10,
+    "titleFontSize": 13,
+
+    "labelFontWeight": "bold",
+    "titleFontWeight": "bold"
   }
+}
 }

@@ -3,7 +3,7 @@
   
 
   "width": 320,
-  "height": 220,
+  "height": 200,
 
   "data": {
     "url": "data/aus_oecd_obesity_comparison.csv"
@@ -42,7 +42,9 @@
         "range": ["#4b2e83", "#2a9d8f"]
       },
       "legend": {
-        "orient": "right"
+        "orient": "right",
+        "labelFont": "Rubik",
+        "titleFont": "Rubik"
       }
     },
 
@@ -63,10 +65,20 @@
   },
 
   "config": {
-    "background": "#f8f5ef",
+  "background": "#faeab4",
 
-    "view": {
-      "stroke": null
+  "view": {
+    "stroke": null
+  },
+
+  "axis": {
+    "labelFont": "Rubik",
+    "titleFont": "Rubik",
+
+    "labelFontSize": 10,
+    "titleFontSize": 14,
+
+    "labelFontWeight": "bold"
     }
   }
 }

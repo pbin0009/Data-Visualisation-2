@@ -1,16 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 620,
-  "height": 280,
+"width": 400,
+"height": 300,
 
-  "title": " ",
-
-  "projection": {
-    "type": "mercator",
-    "center": [134, -28],
-    "scale": 430
-  },
+"projection": {
+  "type": "mercator",
+  "center": [134, -28],
+  "scale": 450
+},
 
   "layer": [
     {
@@ -31,7 +29,7 @@
       "mark": {
         "type": "geoshape",
         "fill": "#efe6d6",
-        "stroke": "#4b2e83",
+        "stroke": "#6b4f3b",
         "strokeWidth": 0.8
       }
     },
@@ -87,7 +85,7 @@
   ],
 
   "config": {
-    "background": "#f8f5ef",
+    "background": "#faeab4",
 
     "view": {
       "stroke": null
