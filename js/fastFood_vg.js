@@ -60,3 +60,22 @@ vegaEmbed("#dumbbell-chart", agegroup_dumbbell, {
     actions: false
 }).then(function(result) {
 }).catch(console.error);
+
+
+/* =========================
+   IMAGE SLIDESHOW
+========================= */
+
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slideshow .slide");
+
+setInterval(() => {
+
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].classList.add("active");
+
+}, 3000);
