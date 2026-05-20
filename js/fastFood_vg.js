@@ -35,3 +35,27 @@ vegaEmbed("#spending-lollipop-chart", spending_lollipop, {
     actions: false
 }).then(function(result) {
 }).catch(console.error);
+
+var severe_obesity_linechart =
+    "jsonFile/obesityAgedOver18_line.vg.json";
+
+vegaEmbed("#line-chart-1", severe_obesity_linechart, {
+    actions: false
+}).then(function(result) {
+}).catch(console.error);
+
+var children_obesity_linechart =
+    "jsonFile/children_obesity_linechart.vg.json";
+
+vegaEmbed("#line-chart-2", children_obesity_linechart, {
+    actions: false
+}).then(function(result) {
+}).catch(console.error);
+
+var agegroup_dumbbell =
+    "jsonFile/obese_agegroup_dumbbell.vg.json";
+
+vegaEmbed("#dumbbell-chart", agegroup_dumbbell, {
+    actions: false
+}).then(function(result) {
+}).catch(console.error);

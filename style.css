@@ -284,3 +284,136 @@ body {
     height: 230px;
     justify-content: center;
 }
+
+/* =========================
+   OBESITY PARAGRAPH SECTION
+========================= */
+
+.obesity-paragraph-section {
+
+    height: 120px;
+
+    display: grid;
+
+    grid-template-columns: 0.4fr 1.8fr 0.4fr;
+
+    padding: 10px 20px;
+
+    border-bottom: 3px solid #4b2e83;
+
+    background-color: #f8f5ef;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.obesity-text-box {
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.obesity-text-box h2 {
+
+    margin: 0 0 10px 0;
+
+    color: #4b2e83;
+
+    font-size: 18px;
+}
+
+.obesity-text-box p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   LINE CHART SECTION
+========================= */
+
+.health-trend-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    height: 600px;
+
+    padding: 10px 20px;
+
+    border-top: 4px solid #4b2e83;
+}
+
+.health-left,
+.health-right {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr;
+
+    gap: 25px;
+
+    height: 100%;
+}
+
+.chart-box,
+.text-box {
+    background-color: #f8f5ef;
+
+    overflow: hidden;
+}
+
+.chart-box h2,
+.text-box h2 {
+    color: #4b2e83;
+
+    margin-bottom: 15px;
+}
+
+.dumbbell-legend {
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    align-items: center;
+}
+
+.legend-obese {
+    width: 14px;
+    height: 14px;
+
+    background-color: #4b2e83;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+.legend-overweight {
+    width: 14px;
+    height: 14px;
+
+    border: 3px solid #e76f00;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+    background-color: #f8f5ef;
+}
