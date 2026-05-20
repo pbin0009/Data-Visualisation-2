@@ -1,0 +1,91 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 430,
+  "height": 220,
+
+  "data": {
+    "url": "data/obeseAgeGroup.csv"
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#4b2e83",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "Age group",
+          "type": "nominal",
+          "sort": ["18-24", "25-34", "35-44", "45-54", "55-64", "65 and over"],
+          "title": null
+        },
+        "x": {
+          "field": "Obese",
+          "type": "quantitative",
+          "title": "Percentage (%)"
+        },
+        "x2": {
+          "field": "Overweight"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 90,
+        "color": "#4b2e83"
+      },
+      "encoding": {
+        "y": {
+          "field": "Age group",
+          "type": "nominal",
+          "sort": ["18-24", "25-34", "35-44", "45-54", "55-64", "65 and over"],
+          "title": null
+        },
+        "x": {
+          "field": "Obese",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "Age group", "type": "nominal"},
+          {"field": "Obese", "type": "quantitative", "title": "Obese (%)"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 90,
+        "fill": "#f8f5ef",
+        "stroke": "#e76f00",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "y": {
+          "field": "Age group",
+          "type": "nominal",
+          "sort": ["18-24", "25-34", "35-44", "45-54", "55-64", "65 and over"],
+          "title": null
+        },
+        "x": {
+          "field": "Overweight",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "Age group", "type": "nominal"},
+          {"field": "Overweight", "type": "quantitative", "title": "Overweight (%)"}
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "background": "#f8f5ef",
+    "view": {
+      "stroke": null
+    }
+  }
+}

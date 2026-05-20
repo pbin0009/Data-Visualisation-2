@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 520,
+  "height": 220,
+
+  "data": {
+    "url": "data/obeseOver18.csv"
+  },
+
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": true,
+      "size": 90
+    },
+    "strokeWidth": 4
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 11
+      }
+    },
+
+    "y": {
+      "field": "Rate",
+      "type": "quantitative",
+      "title": "Rate (%)"
+    },
+
+    "color": {
+      "field": "Gender",
+      "type": "nominal",
+
+      "scale": {
+        "range": ["#4b2e83", "#e76f00"]
+      },
+
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "title": null
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "ordinal"
+      },
+      {
+        "field": "Gender",
+        "type": "nominal"
+      },
+      {
+        "field": "Rate",
+        "type": "quantitative"
+      }
+    ]
+  },
+
+  "config": {
+
+    "background": "#f8f5ef",
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}
