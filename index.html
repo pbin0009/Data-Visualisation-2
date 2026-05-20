@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Vega Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Exploring Australia's Fast Food and Health Trends </title>
+</head>
+
+<body>
+    <script src="js/fastFood_vg.js"></script>
+
+    <!-- ================= HEADER ================= -->
+    <header class="main-header">
+
+        <!-- Left : Australia Flag -->
+        <div class="header-left">
+            <img src="images/ausFlag.png" alt="Australia Flag">
+        </div>
+
+        <!-- Center : Dashboard Title -->
+        <div class="header-center">
+            <h1>
+                Exploring Australia's Fast Food and Health Trends
+            </h1>
+        </div>
+
+        <!-- Right : AIHW Logo -->
+        <div class="header-right">
+            <img src="images/aihw.png" alt="AIHW Logo">
+        </div>
+
+    </header>
+
+<!-- ================= INTRO OVERVIEW SECTION ================= -->
+    <section class="overview-section">
+
+    <!-- LEFT HALF: Image + Introduction -->
+    <div class="overview-left">
+
+        <!-- Burger Image -->
+        <div class="burger-image-box">
+            <img src="images/hamburgerMan.png" alt="Burger illustration">
+        </div>
+
+        <!-- Introduction Text -->
+        <div class="intro-text-box">
+            <h3>Introduction</h3>
+            <p>
+                This dashboard explores the relationship between fast food habits,
+                obesity patterns, and physical health among Australians.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- RIGHT HALF: Dot Map -->
+    <div class="overview-right">
+        <h3>Fast Food Restaurant Map</h3>
+
+        <!-- Dot map graph will be inserted here later -->
+        <div id="dot-map"></div>
+    </div>
+
+    </section>
+
+<!-- ================= FAST FOOD CONSUMPTION SECTION ================= -->
+    <section class="fastfood-section-part1">
+
+    <!-- Left: Pie Chart -->
+    <div class="fastfood-chart-box">
+        <h2>Fast Food Type Share</h2>
+
+        <!-- Pie chart will be inserted here later -->
+        <div id="pie-chart"></div>
+    </div>
+
+    <!-- Middle: Text -->
+    <div class="fastfood-text-box">
+        <h2>Fast Food Consumption</h2>
+        <p>
+            Fast food choices can reflect consumer preferences, affordability,
+            convenience, and lifestyle habits across Australia.
+        </p>
+    </div>
+
+    <!-- Right: Horizontal Bar Chart -->
+    <div class="fastfood-chart-box">
+        <h2>Fast Food Spending by State</h2>
+
+        <!-- Horizontal bar chart will be inserted here later -->
+        <div id="bar-chart"></div>
+    </div>
+
+    </section>
+
+<!-- ================= AUS AND OECD COMPARISON ================= -->
+    <section class="fastfood-section-part2">
+
+    <!-- Left: Lollipop Chart -->
+    <div class="spending-lollipop-box">
+        <h2>Average Monthly Fast Food Spending by State</h2>
+
+        <!-- Lollipop chart will go here later -->
+        <div id="spending-lollipop-chart"></div>
+    </div>
+
+    <!-- Middle: Text Box -->
+    <div class="fastfood-middle-text-box">
+        <h2>Fast Food & Health</h2>
+        <p>
+            Fast food spending and obesity patterns provide insight into how
+            lifestyle, diet, and consumer behaviour may relate to health outcomes
+            in Australia.
+        </p>
+    </div>
+
+    <!-- Right: OECD Bar Chart -->
+    <div class="oecd-bar-box">
+        <h2>Australia vs OECD Average</h2>
+
+        <!-- OECD bar chart will go here later -->
+        <div id="oecd-obesity-chart"></div>
+    </div>
+
+    </section>
+
+    <!-- ================= OBESITY PARAGRAPH SECTION ================= -->
+    <section class="obesity-paragraph-section">
+
+    <!-- Left Empty Space -->
+    <div></div>
+
+    <!-- Middle Text Box -->
+    <div class="obesity-text-box">
+
+        <h2>Fast Food and Obesity</h2>
+
+        <p>
+            Increasing fast food accessibility and consumption patterns may
+            contribute to rising obesity rates and unhealthy lifestyle habits
+            across Australia.
+        </p>
+
+    </div>
+
+    <!-- Right Empty Space -->
+    <div></div>
+
+    </section>
+
+    <!-- ================= LINE CHART SECTION ================= -->
+<section class="health-trend-section">
+
+    <!-- LEFT COLUMN -->
+    <div class="health-left">
+
+        <!-- TOP LEFT -->
+        <div class="chart-box">
+            <h2>Severe Obesity Trends</h2>
+
+            <div id="line-chart-1"></div>
+        </div>
+
+        <!-- BOTTOM LEFT -->
+        <div class="chart-box">
+            <h2>Another Health Trend</h2>
+
+            <div id="line-chart-2"></div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="health-right">
+
+        <!-- TOP RIGHT -->
+        <div class="chart-box">
+
+            <h2>Obesity by Age Group</h2>
+
+        <div class="dumbbell-legend">
+
+            <span class="legend-obese"></span> Obese
+
+            <span class="legend-overweight"></span> Overweight
+
+        </div>
+
+        <div id="dumbbell-chart"></div>
+
+    </div>
+
+        <!-- BOTTOM RIGHT -->
+        <div class="text-box">
+
+            <h2>Health Insights</h2>
+
+            <p>
+                Long-term obesity trends in Australia reveal increasing health
+                concerns among both males and females. Changes in dietary
+                habits, fast food accessibility, and lifestyle behaviours may
+                contribute to these patterns over time.
+            </p>
+
+            <p>
+                Age-group comparisons also show higher obesity and overweight
+                rates among middle-aged adults, highlighting the growing
+                impact of unhealthy eating habits across different stages of life.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>
