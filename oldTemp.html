@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Vega Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Exploring Australia's Fast Food and Health Trends </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Lilita+One&family=Prata&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+
+    <!-- ================= HEADER ================= -->
+    <header class="main-header">
+
+        <!-- Left : Australia Flag -->
+        <div class="header-left">
+            <img src="images/ausFlag.png" alt="Australia Flag">
+        </div>
+
+        <!-- Center : Dashboard Title -->
+        <div class="header-center">
+
+            <h1>
+                Exploring Australia's Fast Food and Health Trends
+            </h1>
+
+            <h3>
+                Fast Food, Obesity and Physical Activities
+            </h3>
+
+        </div>
+
+        <!-- Right : AIHW Logo -->
+        <div class="header-right">
+            <img src="images/fastFoodCombo.png" alt="AIHW Logo">
+        </div>
+
+    </header>
+
+<!-- ================= INTRO OVERVIEW SECTION ================= -->
+    <section class="overview-section">
+
+    <!-- 1. Burger Image -->
+    <div class="burger-image-box slideshow">
+    <img src="images/hamburgerMan.png" class="slide active" alt="Burger man illustration">
+    <img src="images/fastfood.png" class="slide" alt="Fast food illustration">
+    <img src="images/hamburgerManPink.png" class="slide" alt="Burger man illustration">
+    <img src="images/chicken.png" class="slide" alt="Fast Food illustration">
+</div>
+
+    <!-- 2. Introduction Text -->
+    <div class="intro-text-box">
+        <h3>Overview</h3>
+        <p>
+            This dashboard explores the relationship between fast food habits, obesity patterns, and physical health among Australians. Increasing fast food consumption, driven by convenience and affordability, has become a growing public health concern as it may contribute to obesity and unhealthy lifestyle habits.
+
+        </p>
+    </div>
+
+    <!-- 3. Dot Map -->
+    <div class="dotmap-box">
+        <h3>Fast Food Restaurant around Australia</h3>
+        <div id="dot-map"></div>
+    </div>
+
+    <!-- 4. Map Explanation Text -->
+    <div class="map-text-box">
+        <h3>Fast Food Access</h3>
+        <p>
+            Fast food restaurants are highly concentrated around major cities and coastal areas, reflecting population density and urban food access. Popular chains such as McDonald's, KFC, and Hungry Jack's are commonly located near shopping centres, highways, and tourist areas due to high consumer demand.
+
+        </p>
+    </div>
+
+    </section>
+
+<!-- ================= FAST FOOD CONSUMPTION SECTION ================= -->
+    <section class="fastfood-section-part1">
+
+    <!-- Left: Pie Chart -->
+    <div class="fastfood-chart-box">
+        <h2>Fast Food Type Market Share</h2>
+
+        <div id="pie-chart"></div>
+    </div>
+
+    <!-- Middle: Text -->
+    <div class="fastfood-text-box">
+        <h2>Fast Food Consumption</h2>
+        <p>
+            Fast food consumption patterns in Australia show strong demand for quick and accessible meals. Burgers and sandwiches dominate consumer choices, while meal deals and loyalty programs remain popular among regular customers. These behaviours highlight the growing role of fast food in everyday Australian lifestyles.
+
+        </p>
+    </div>
+
+    <!-- Right: Horizontal Bar Chart -->
+    <div class="fastfood-chart-box">
+        <h2>QSR Consumer Habits in Australia</h2>
+
+        <!-- Horizontal bar chart will be inserted here later -->
+        <div id="bar-chart"></div>
+    </div>
+
+    </section>
+
+<!-- ================= AUS AND OECD COMPARISON ================= -->
+    <section class="fastfood-section-part2">
+
+    <!-- Left: Lollipop Chart -->
+    <div class="spending-lollipop-box">
+        <h2>Average Monthly Fast Food Spending by State</h2>
+
+        <!-- Lollipop chart will go here later -->
+        <div id="spending-lollipop-chart"></div>
+    </div>
+
+    <!-- Middle: Text Box -->
+    <div class="fastfood-middle-text-box">
+        <h2>Fast Food & Health</h2>
+        <p>
+            Fast food spending and obesity patterns provide insight into how lifestyle, diet, and consumer behaviour may relate to health outcomes in Australia. Victoria and New South Wales, which have a high concentration of fast food restaurants, also show the highest average spending on fast food. Higher fast food consumption may contribute to poorer health outcomes, and compared with the OECD average, Australia records higher obesity and overweight rates among both males and females.
+
+        </p>
+    </div>
+
+    <!-- Right: OECD Bar Chart -->
+    <div class="oecd-bar-box">
+        <h2>Australia vs OECD Obesity Comparison</h2>
+
+        <!-- OECD bar chart will go here later -->
+        <div id="oecd-obesity-chart"></div>
+    </div>
+
+    </section>
+
+    <!-- ================= OBESITY PARAGRAPH SECTION ================= -->
+    <section class="obesity-paragraph-section">
+
+    <!-- Left Empty Space -->
+    <div class="obesity-paragraph-left">
+        <img src="images/aihw.png" alt="Australia Flag">
+    </div>
+
+    <!-- Middle Text Box -->
+    <div class="obesity-text-box">
+
+        <h2>Fast Food and Obesity</h2>
+
+        <p>
+            Increasing fast food accessibility and consumption patterns may contribute to rising obesity rates and unhealthy lifestyle habits across Australia. Higher fast food consumption is often associated with diets high in calories, fat, and sugar, which may increase the risk of obesity and related health issues. Obesity statistics used in this dashboard were obtained from the Australian Institute of Health and Welfare (AIHW).
+
+        </p>
+
+    </div>
+
+    <!-- Right Empty Space -->
+    <div class="obesity-paragraph-right">
+        <img src="images/fastFoodCombo.png" alt="Australia Flag">
+    </div>
+
+    </section>
+
+    <!-- ================= LINE CHART SECTION ================= -->
+<section class="health-trend-section">
+
+    <!-- LEFT COLUMN -->
+    <div class="health-left">
+
+        <!-- TOP LEFT -->
+        <div class="chart-box">
+            <h2>Severe Obesity in Adults Over Time</h2>
+
+            <div id="line-chart-1"></div>
+        </div>
+
+        <!-- BOTTOM LEFT -->
+        <div class="chart-box">
+            <h2>Child and Adolescent Obesity Trends Over Time</h2>
+
+            <div id="line-chart-2"></div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="health-right">
+
+        <!-- TOP RIGHT -->
+        <div class="chart-box">
+
+            <h2>Overweight and Obesity Rates Across Age Groups</h2>
+
+        <div class="dumbbell-legend">
+
+            <span class="legend-obese"></span> Obese
+
+            <span class="legend-overweight"></span> Overweight
+
+        </div>
+
+        <div id="dumbbell-chart"></div>
+
+    </div>
+
+        <!-- BOTTOM RIGHT -->
+        <div class="text-box">
+
+            <h2>Health Insights</h2>
+
+            <p>
+                Severe obesity rates among adults have steadily increased from 1995 to 2022, with females recording slightly higher rates than males. Among children and adolescents, overweight rates remain much higher than obesity rates, while both categories generally show an upward trend over time.
+            </p>
+
+            <p>
+                The age-group comparison shows that overweight and obesity rates are higher among middle-aged adults, particularly between ages 45-64. Younger adults aged 18-24 record the lowest rates, while older age groups continue to experience relatively high levels of obesity and overweight.
+            </p>
+
+            <p>
+                The rising trends may reflect the impact of unhealthy eating habits, frequent fast food consumption, and lifestyle changes on the general health of Australians.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<script src="js/fastFood_vg.js"></script>
+</body>
+
+</html>
