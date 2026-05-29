@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 430,
+  "height": 320,
+
+  "data": {
+    "url": "data/physical_completed.csv"
+  },
+
+  "transform": [
+    {
+      "fold": ["Male", "Female"],
+      "as": ["Sex", "Percentage"]
+    },
+    {
+      "calculate": "datum.Sex == 'Male' ? -datum.Percentage : datum.Percentage",
+      "as": "ButterflyValue"
+    }
+  ],
+
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+  },
+
+  "encoding": {
+    "y": {
+      "field": "Minutes",
+      "type": "ordinal",
+      "sort": [
+        "0 min",
+        "1-29 min",
+        "30-59 min",
+        "60-89 min",
+        "90-119 min",
+        "120-149 min",
+        "150+ min"
+      ],
+      "title": "Minutes"
+    },
+
+    "x": {
+      "field": "ButterflyValue",
+      "type": "quantitative",
+      "title": "Percentage (%)",
+      "scale": {
+        "domain": [-35, 35]
+      },
+      "axis": {
+        "labelExpr": "abs(datum.value)"
+      }
+    },
+
+    "color": {
+      "field": "Sex",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Male", "Female"],
+        "range": ["#4b2e83", "#e76f00"]
+      },
+      "legend": {
+        "orient": "top",
+        "title": "Sex"
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "Minutes",
+        "type": "ordinal",
+        "title": "Minutes"
+      },
+      {
+        "field": "Sex",
+        "type": "nominal",
+        "title": "Sex"
+      },
+      {
+        "field": "Percentage",
+        "type": "quantitative",
+        "title": "Percentage (%)",
+        "format": ".2f"
+      }
+    ]
+  },
+
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    }
+  }
+}

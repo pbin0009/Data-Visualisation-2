@@ -1,0 +1,13 @@
+﻿Gender,Category,Percentage,Category_Order
+Men,Underweight,0.9,1
+Men,Normal,27.1,2
+Men,Overweight,38.6,3
+Men,Obese Class I,20.7,4
+Men,Obese Class II,8.0,5
+Men,Obese Class III,3.8,6
+Women,Underweight,2.3,1
+Women,Normal,36.0,2
+Women,Overweight,29.6,3
+Women,Obese Class I,17.4,4
+Women,Obese Class II,8.0,5
+Women,Obese Class III,5.4,6

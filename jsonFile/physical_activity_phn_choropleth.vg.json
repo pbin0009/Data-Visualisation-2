@@ -1,0 +1,93 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 580,
+  "height": 340,
+
+  "data": {
+    "url": "jsonFile/phn.geojson",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+
+  "transform": [
+    {
+      "lookup": "properties.PHN_CODE",
+      "from": {
+        "data": {
+          "url": "data/physical_activity_phn.csv"
+        },
+        "key": "PHN_CODE",
+        "fields": ["PHN_NAME", "Percent"]
+      }
+    },
+    {
+      "calculate": "isValid(datum.Percent) ? datum.Percent : -1",
+      "as": "PercentFixed"
+    }
+  ],
+
+  "projection": {
+    "type": "mercator"
+  },
+
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+
+  "encoding": {
+    "color": {
+      "field": "PercentFixed",
+      "type": "quantitative",
+      "title": "Inactive (%)",
+      "scale": {
+        "domain": [-1, 40, 75],
+        "range": ["#bdbdbd", "#fee08b", "#d73027"]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "gradientLength": 180,
+        "gradientThickness": 18,
+        "titleAnchor": "middle",
+        "titleOrient": "top",
+        "offset": 25,
+        "legendX": 250
+      }
+    },
+    "tooltip": [
+      {
+        "field": "properties.PHN_NAME",
+        "type": "nominal",
+        "title": "PHN Area"
+      },
+      {
+        "field": "Percent",
+        "type": "quantitative",
+        "title": "Inactive (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+
+    "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "orient": "bottom",
+      "direction": "horizontal",
+      "gradientLength": 220,
+      "gradientThickness": 18,
+      "titleAnchor": "middle",
+      "titleOrient": "top",
+      "offset": 15
+    }
+    }
+  }
+

@@ -1,0 +1,100 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 300,
+  "height": 120,
+
+  "data": {
+    "url": "data/bmi_adult_by_sex.csv"
+  },
+
+  "mark": {
+    "type": "bar",
+    "height": 45
+  },
+
+  "encoding": {
+    "y": {
+      "field": "Gender",
+      "type": "nominal",
+      "title": null,
+      "sort": ["Men", "Women"]
+    },
+
+    "order": {
+      "field": "Category_Order",
+      "type": "quantitative",
+      "sort": "ascending"
+    },
+
+    "x": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "title": "Percentage (%)",
+      "stack": "zero"
+    },
+
+    "color": {
+      "field": "Category",
+      "type": "nominal",
+      "title": "BMI Category",
+
+      "scale": {
+        "domain": [
+          "Underweight",
+          "Normal",
+          "Overweight",
+          "Obese Class I",
+          "Obese Class II",
+          "Obese Class III"
+        ],
+
+        "range": [
+          "#c00000",
+          "#008f3a",
+          "#f3d400",
+          "#d95f02",
+          "#b30000",
+          "#7f0000"
+        ]
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "Gender",
+        "type": "nominal"
+      },
+      {
+        "field": "Category",
+        "type": "nominal"
+      },
+      {
+        "field": "Percentage",
+        "type": "quantitative"
+      }
+    ]
+  },
+
+  "config": {
+    "background": "#faeab4",
+
+    "view": {
+      "stroke": "transparent"
+    },
+
+    "axis": {
+      "labelFont": "Fredoka",
+      "titleFont": "Fredoka",
+      "labelFontSize": 13,
+      "titleFontSize": 14
+    },
+
+    "legend": {
+      "labelFont": "Fredoka",
+      "titleFont": "Fredoka",
+      "labelFontSize": 12,
+      "titleFontSize": 13
+    }
+  }
+}

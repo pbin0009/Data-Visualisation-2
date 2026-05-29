@@ -79,3 +79,102 @@ setInterval(() => {
     slides[currentSlide].classList.add("active");
 
 }, 3000);
+
+/* =========================
+   BMI CALCULATOR
+========================= */
+
+function calculateBMI() {
+
+    const height = Number(document.getElementById("bmi-height").value);
+    const weight = Number(document.getElementById("bmi-weight").value);
+
+    const resultText = document.getElementById("bmi-result-text");
+    const description = document.getElementById("bmi-description");
+    const arrow = document.getElementById("bmi-arrow");
+
+    if (height <= 0 || weight <= 0) {
+        resultText.textContent = "BMI = --";
+        description.textContent = "Please enter a valid height and weight above 0.";
+        arrow.style.transform = "rotate(-90deg)";
+        return;
+    }
+
+    const heightInMetres = height / 100;
+    const bmi = weight / (heightInMetres * heightInMetres);
+    const bmiRounded = bmi.toFixed(1);
+
+    let category = "";
+    let message = "";
+    let angle = 0;
+
+    if (bmi < 16) {
+        category = "Severe Thinness";
+        message = "This BMI is far below the healthy range and may indicate serious underweight health risks.";
+        angle = -80;
+    } else if (bmi < 17) {
+        category = "Moderate Thinness";
+        message = "This BMI is below the healthy range and may suggest underweight health concerns.";
+        angle = -65;
+    } else if (bmi < 18.5) {
+        category = "Mild Thinness";
+        message = "This BMI is slightly below the healthy range.";
+        angle = -50;
+    } else if (bmi < 25) {
+        category = "Normal";
+        message = "This BMI is within the healthy range for adults.";
+        angle = -25;
+    } else if (bmi < 30) {
+        category = "Overweight";
+        message = "This BMI is above the healthy range and may increase future health risks.";
+        angle = 15;
+    } else if (bmi < 35) {
+        category = "Obese Class I";
+        message = "This BMI falls within Obese Class I and may be linked to higher health risks.";
+        angle = 45;
+    } else if (bmi < 40) {
+        category = "Obese Class II";
+        message = "This BMI falls within Obese Class II and indicates increased obesity-related health risks.";
+        angle = 65;
+    } else {
+        category = "Obese Class III";
+        message = "This BMI is in the highest obesity category and may indicate serious long-term health risks.";
+        angle = 82;
+    }
+
+    resultText.textContent = "BMI = " + bmiRounded + " (" + category + ")";
+    description.textContent = message;
+    arrow.style.transform = "rotate(" + angle + "deg)";
+}
+
+var bmi_stacked_bar = "jsonFile/bmi_stacked_bar.vg.json";
+
+vegaEmbed("#bmi-stacked-bar-chart", bmi_stacked_bar, {
+    actions: false
+}).then(function(result) {
+}).catch(console.error);
+
+var bmi_heatmap = "jsonFile/bmi_distribution_heatmap.vg.json";
+
+vegaEmbed("#bmi-heatmap-chart", bmi_heatmap, {
+    actions: false
+}).then(function(result) {
+}).catch(console.error);
+
+
+var physical_activity_choropleth =
+    "jsonFile/physical_activity_phn_choropleth.vg.json";
+
+vegaEmbed("#choropleth-map", physical_activity_choropleth, {
+    actions: false
+}).then(function(result) {
+}).catch(console.error);
+
+
+var physical_completed_butterfly =
+    "jsonFile/physical_completed_butterfly.vg.json";
+
+vegaEmbed("#butterfly-bar-chart", physical_completed_butterfly, {
+    actions: false
+}).then(function(result) {
+}).catch(console.error);
