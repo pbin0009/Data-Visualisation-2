@@ -1225,3 +1225,15 @@ h1, h2, h3, h4, h5, h6 {
 .references-section a:hover {
     text-decoration: underline;
 }
+
+.dashboard-meta{
+    margin-top:20px;
+
+    font-size:14px;
+
+    color:#6b4f3b;
+
+    text-align:center;
+
+    font-style:italic;
+}
