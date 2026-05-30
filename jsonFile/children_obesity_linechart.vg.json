@@ -4,55 +4,153 @@
   "width": 420,
   "height": 180,
 
-  "data": {
-    "url": "data/children_obesity_trend.csv"
-  },
-
-  "mark": {
-    "type": "line",
-    "point": {
-      "filled": true,
-      "size": 80
-    },
-    "strokeWidth": 4
-  },
-
-  "encoding": {
-    "x": {
-    "field": "Year",
-    "type": "ordinal",
-    "title": null,
-
-    "axis": {
-        "labelAngle": 0
-    }
-    },
-
-    "y": {
-      "field": "Rate",
-      "type": "quantitative",
-      "title": "Rate (%)"
-    },
-
-    "color": {
-      "field": "Category",
-      "type": "nominal",
-      "scale": {
-        "range": ["#4b2e83", "#e76f00"]
+  "layer": [
+    {
+      "data": {
+        "url": "data/children_obesity_trend.csv"
       },
-      "legend": {
-        "orient": "bottom",
-        "direction": "horizontal",
-        "title": null
+      "mark": {
+        "type": "line",
+        "point": {
+          "filled": true,
+          "size": 80
+        },
+        "strokeWidth": 4
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "Rate",
+          "type": "quantitative",
+          "title": "Rate (%)",
+          "scale": {
+            "domain": [0, 24]
+          }
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "scale": {
+            "range": ["#4b2e83", "#e76f00"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "title": null
+          }
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal"},
+          {"field": "Category", "type": "nominal"},
+          {"field": "Rate", "type": "quantitative", "title": "Rate (%)"}
+        ]
       }
     },
 
-    "tooltip": [
-      {"field": "Year", "type": "ordinal"},
-      {"field": "Category", "type": "nominal"},
-      {"field": "Rate", "type": "quantitative", "title": "Rate (%)"}
-    ]
-  },
+    {
+      "data": {
+        "values": [
+          {
+            "Year": "2017-2018",
+            "Rate": 17
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "shape": "circle",
+        "size": 180,
+        "filled": false,
+        "stroke": "#8c7b6b",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"field": "Rate", "type": "quantitative"}
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {
+            "x": 315,
+            "y": -10
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "width": 190,
+        "height": 58,
+        "cornerRadius": 8,
+        "fill": "#fff8dc",
+        "stroke": "#8c7b6b",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": null
+        }
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {
+            "x": 315,
+            "y": -25,
+            "Note": [
+              "Overweight prevalence decreased",
+              "after 2014-15, though AIHW",
+              "reports overall rates remained",
+              "relatively stable."
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 9,
+        "fontWeight": "bold",
+        "lineBreak": "\n",
+        "lineHeight": 11,
+        "color": "#6b4f3b"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": null
+        },
+        "text": {
+          "field": "Note"
+        }
+      }
+    }
+  ],
 
   "config": {
     "background": "#faeab4",

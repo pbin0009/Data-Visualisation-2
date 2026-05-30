@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 2fr;
     gap: 20px;
 
-    height: 300px;
+    min-height: 380px;
 }
 
 /* LEFT SLIDESHOW */
@@ -162,18 +162,15 @@ h1, h2, h3, h4, h5, h6 {
 /* RIGHT ONE BOX */
 .overview-content-box {
     background-color: #faeab4;
-
     border-radius: 18px;
-
     padding: 25px;
-
     box-sizing: border-box;
 
     display: flex;
-
     flex-direction: column;
+    justify-content: flex-start;
 
-    justify-content: space-between;
+    overflow: hidden;
 }
 
 .overview-content-box h2 {
@@ -210,34 +207,126 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
 }
 
-/* =========================
-   FAST FOOD ACCESS PARAGRAPH
-========================= */
-
-.fastfood-access-paragraph-section {
-    margin-top: 40px;
+.fact-card-container {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 15px;
 }
 
-.fastfood-access-paragraph-box {
-    min-height: 120px;
+.fact-card {
+    width: 180px;
+    height: 110px;
+    position: relative;
+    cursor: pointer;
+}
 
-    background-color: transparent;
+.fact-front,
+.fact-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 14px;
+    border: 2px dashed #d98b2b;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+
+    text-align: center;
+    box-sizing: border-box;
+
+    transition: opacity 0.4s ease;
+}
+
+.fact-front {
+    background-color: #fff8dc;
+    color: #a62c2c;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.fact-front span {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #6b4f3b;
+}
+
+.fact-back {
+    background-color: #fff8dc;
+    color: #6b4f3b;
+    opacity: 0;
+    padding: 12px;
+}
+
+.fact-back h4 {
+    margin: 0 0 6px 0;
+    color: #a62c2c;
+    font-size: 16px;
+}
+
+.fact-back p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.fact-card.revealed .fact-front {
+    opacity: 0;
+}
+
+.fact-card.revealed .fact-back {
+    opacity: 1;
+}
+
+/* =========================
+   FAST FOOD ACCESS PARAGRAPH
+========================= */
+.fastfood-access-paragraph-section {
+    margin-top: 50px;
+}
+.fastfood-access-paragraph-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+.fastfood-access-title {
+    grid-column: 1 / -1;
+}
+
+
+.fastfood-access-title h2 {
+    margin: 0 0 10px 0;
+
+    color: #a62c2c;
+
+    font-size: 30px;
+
+    text-align: center;
+}
+
+.fastfood-access-paragraph-box {
+    background-color: transparent;
 
     padding: 0 10px;
 
     box-sizing: border-box;
 }
 
-.fastfood-access-paragraph-box h2 {
+.fastfood-access-paragraph-box h3 {
     margin: 0 0 12px 0;
 
-    color: #a62c2c;
+    color: #6b4f3b;
 
-    font-size: 28px;
+    font-size: 20px;
 
     text-align: center;
 }
@@ -265,7 +354,7 @@ h1, h2, h3, h4, h5, h6 {
 
     margin-top: 20px;
 
-    height: 390px;
+    height: 400px;
 }
 
 .map-box,
@@ -310,29 +399,43 @@ h1, h2, h3, h4, h5, h6 {
 ========================= */
 
 .fastfood-paragraph-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
     margin-top: 30px;
 }
 
+.fastfood-consumption-title {
+    grid-column: 1 / -1;
+}
+
+.fastfood-consumption-title h2 {
+    margin: 0 0 10px 0;
+
+    color: #a62c2c;
+
+    font-size: 27px;
+
+    text-align: center;
+}
+
 .fastfood-paragraph-box {
-    height: 120px;
-
     background-color: transparent;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
     padding: 0 10px;
 
     box-sizing: border-box;
 }
 
-.fastfood-paragraph-box h2 {
+.fastfood-paragraph-box h3 {
     margin: 0 0 12px 0;
 
-    color: #a62c2c;
+    color: #6b4f3b;
 
-    font-size: 28px;
+    font-size: 20px;
 
     text-align: center;
 }
@@ -397,7 +500,32 @@ h1, h2, h3, h4, h5, h6 {
 
     align-items: center;
 }
+.obesity-insight-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
 
+.obesity-insight-box {
+    background-color: transparent;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.obesity-insight-box h2 {
+    margin: 0 0 12px 0;
+    color: #a62c2c;
+    font-size: 24px;
+    text-align: center;
+}
+
+.obesity-insight-box p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
 
 
 /* =========================
@@ -737,13 +865,13 @@ h1, h2, h3, h4, h5, h6 {
     background: conic-gradient(
         from 270deg,
 
-        #c00000 0deg 20deg,      /* underweight #F89880*/ 
+        #E76F51 0deg 20deg,      /* Underweight */
 
-        #008f3a 20deg 90deg,     /* normal */
+        #008f3a 20deg 90deg,     /* Normal */
 
-        #f3d400 90deg 150deg,    /* overweight */
+        #F3D400 90deg 150deg,    /* Overweight */
 
-        #c00000 150deg 180deg    /* obese I II III */
+        #E76F51 150deg 180deg    /* Obese */
     );
 
     overflow: hidden;
@@ -792,42 +920,50 @@ h1, h2, h3, h4, h5, h6 {
     color: #6b4f3b;
 }
 
+
+
 /* =========================
    BMI VS OBESITY PARAGRAPH
 ========================= */
 
-.bmi-obesity-paragraph-section {
+/* =========================
+   FAST FOOD CONSUMPTION
+========================= */
+
+.BMIObesity-paragraph-section {
     margin-top: 40px;
 }
 
-.bmi-obesity-paragraph-box {
-    height: 130px;
+.BMIObesity-paragraph-section h2 {
+    margin: 0 0 25px 0;
 
+    color: #a62c2c;
+
+    font-size: 28px;
+    text-align: center;
+}
+
+.BMIObesity-paragraph-text-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+}
+
+.BMIObesity-paragraph-text-box {
     background-color: transparent;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 0 10px;
+    padding: 0 5px;
 
     box-sizing: border-box;
 }
 
-.bmi-obesity-paragraph-box h2 {
-    margin: 0 0 12px 0;
-
-    color: #a62c2c;
-
-    font-size: 26px;
-    text-align: center;
-}
-
-.bmi-obesity-paragraph-box p {
+.BMIObesity-paragraph-text-box p {
     margin: 0;
 
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
 
     text-align: justify;
 }
@@ -888,38 +1024,46 @@ h1, h2, h3, h4, h5, h6 {
    PHYSICAL ACTIVITY PARAGRAPH
 ========================= */
 
-.physical-activity-paragraph-section {
+/* =========================
+   OBESITY AND PHYSICAL ACTIVITY
+========================= */
+
+.obesity-activity-section {
     margin-top: 40px;
 }
 
-.physical-activity-paragraph-box {
-    min-height: 130px;
+.obesity-activity-section h2 {
+    margin: 0 0 25px 0;
 
+    color: #a62c2c;
+
+    font-size: 28px;
+
+    text-align: center;
+}
+
+.obesity-activity-text-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+}
+
+.obesity-activity-text-box {
     background-color: transparent;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 0 10px;
+    padding: 0 5px;
 
     box-sizing: border-box;
 }
 
-.physical-activity-paragraph-box h2 {
-    margin: 0 0 12px 0;
-
-    color: #a62c2c;
-
-    font-size: 26px;
-    text-align: center;
-}
-
-.physical-activity-paragraph-box p {
+.obesity-activity-text-box p {
     margin: 0;
 
     font-size: 16px;
-    line-height: 1.6;
+
+    line-height: 1.7;
 
     text-align: justify;
 }
@@ -977,15 +1121,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =========================
+   CONCLUSION + REFERENCES
+========================= */
+
+.bottom-section {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 50px;
+
+    align-items: stretch;
+}
+
+/* =========================
    CONCLUSION SECTION
 ========================= */
 
 .conclusion-section {
-    margin-top: 50px;
+    flex: 3;
 
-    padding: 10px 20px;
+    padding: 25px;
 
     background-color: transparent;
+
+    border-radius: 18px;
 
     box-sizing: border-box;
 }
@@ -995,7 +1155,7 @@ h1, h2, h3, h4, h5, h6 {
 
     color: #a62c2c;
 
-    font-size: 32px;
+    font-size: 28px;
 
     text-align: center;
 }
@@ -1003,7 +1163,7 @@ h1, h2, h3, h4, h5, h6 {
 .conclusion-section p {
     margin: 0;
 
-    font-size: 17px;
+    font-size: 16px;
 
     line-height: 1.7;
 
@@ -1015,15 +1175,19 @@ h1, h2, h3, h4, h5, h6 {
 ========================= */
 
 .references-section {
-    margin-top: 40px;
+    flex: 2;
 
     padding: 25px;
 
-    background-color: #faeab4;
+    background-color: transparent;
 
     border-radius: 18px;
 
     box-sizing: border-box;
+
+    max-height: 350px;
+
+    overflow-y: auto;
 }
 
 .references-section h2 {

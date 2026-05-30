@@ -31,13 +31,8 @@
       "title": "Percentage (%)"
     },
 
-    "color": {
-      "field": "Percentage",
-      "type": "quantitative",
-      "scale": {
-        "scheme": "oranges"
-      },
-      "legend": null
+      "color": {
+      "value": "#c96f1a"
     },
 
     "tooltip": [

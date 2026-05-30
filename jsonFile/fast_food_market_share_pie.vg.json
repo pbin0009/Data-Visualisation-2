@@ -4,50 +4,138 @@
   "width": 280,
   "height": 240,
 
-  "data": {
-    "url": "data/FastFoodMarketShare.csv"
-  },
-
-  "mark": {
-    "type": "arc",
-    "innerRadius": 45,
-    "outerRadius": 110,
-    "tooltip": true
-  },
-
-  "encoding": {
-    "theta": {
-      "field": "Percentage",
-      "type": "quantitative"
-    },
-
-    "color": {
-      "field": "Type of Product",
-      "type": "nominal",
-      "title": "Fast Food Type",
-
-      "legend": {
-        "labelFont": "Rubik",
-        "titleFont": "Rubik",
-
-        "labelFontSize": 11,
-        "titleFontWeight": "bold"
-      }
-    },
-
-    "tooltip": [
-      {
-        "field": "Type of Product",
-        "type": "nominal",
-        "title": "Type"
+  "layer": [
+    {
+      "data": {
+        "url": "data/FastFoodMarketShare.csv"
       },
-      {
-        "field": "Percentage",
-        "type": "quantitative",
-        "title": "Percentage (%)"
+
+      "mark": {
+        "type": "arc",
+        "innerRadius": 55,
+        "outerRadius": 115,
+        "tooltip": true
+      },
+
+      "encoding": {
+        "theta": {
+          "field": "Percentage",
+          "type": "quantitative"
+        },
+
+        "color": {
+          "field": "Type of Product",
+          "type": "nominal",
+          "title": "Fast Food Type",
+
+          "scale": {
+            "range": [
+              "#457B9D",
+              "#E76F00",
+              "#D1495B",
+              "#5FA8A6",
+              "#9C6ADE",
+              "#E9C46A"
+            ]
+          },
+
+          "legend": {
+            "labelFont": "Rubik",
+            "titleFont": "Rubik",
+            "labelFontSize": 11,
+            "titleFontWeight": "bold"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "Type of Product",
+            "type": "nominal",
+            "title": "Type"
+          },
+          {
+            "field": "Percentage",
+            "type": "quantitative",
+            "title": "Percentage (%)"
+          }
+        ]
       }
-    ]
-  },
+    },
+
+    {
+      "data": {
+        "values": [
+          {
+            "x": 320,
+            "y": 190
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "width": 135,
+        "height": 55,
+        "cornerRadius": 8,
+        "fill": "#fff8dc",
+        "stroke": "#8c7b6b",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": null
+        }
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {
+            "x": 320,
+            "y": 172,
+            "note": [
+              "Burgers/sandwiches and",
+              "chicken make up the",
+              "largest market share,",
+              "reflecting common fast",
+              "food menu offerings."
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 8,
+        "fontWeight": "bold",
+        "align": "center",
+        "baseline": "middle",
+        "lineHeight": 10,
+        "color": "#6b4f3b"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": null
+        },
+        "text": {
+          "field": "note"
+        }
+      }
+    }
+  ],
 
   "config": {
     "background": "#faeab4",

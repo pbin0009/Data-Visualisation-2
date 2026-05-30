@@ -38,7 +38,6 @@
       "field": "Category",
       "type": "nominal",
       "title": "BMI Category",
-
       "scale": {
         "domain": [
           "Underweight",
@@ -48,31 +47,21 @@
           "Obese Class II",
           "Obese Class III"
         ],
-
         "range": [
-          "#c00000",
-          "#008f3a",
-          "#f3d400",
-          "#d95f02",
-          "#b30000",
-          "#7f0000"
+          "#D8CCF0",
+          "#B7A7E6",
+          "#9C6ADE",
+          "#F3D27A",
+          "#F4A261",
+          "#E76F00"
         ]
       }
     },
 
     "tooltip": [
-      {
-        "field": "Gender",
-        "type": "nominal"
-      },
-      {
-        "field": "Category",
-        "type": "nominal"
-      },
-      {
-        "field": "Percentage",
-        "type": "quantitative"
-      }
+      {"field": "Gender", "type": "nominal"},
+      {"field": "Category", "type": "nominal"},
+      {"field": "Percentage", "type": "quantitative", "title": "Percentage (%)"}
     ]
   },
 

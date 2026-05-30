@@ -1,36 +1,137 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-"width": 380,
-"height": 330,
+  "width": 380,
+  "height": 290,
 
-"projection": {
-  "type": "mercator",
-  "center": [134, -28],
-  "scale": 450
-},
+  "projection": {
+    "type": "mercator",
+    "center": [134, -28],
+    "scale": 430
+  },
 
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/vega/vega-datasets/main/data/world-110m.json",
+        "url": "data/australia_states.geojson",
         "format": {
-          "type": "topojson",
-          "feature": "countries"
+          "type": "json",
+          "property": "features"
         }
       },
-
-      "transform": [
-        {
-          "filter": "datum.id == 36"
-        }
-      ],
-
       "mark": {
         "type": "geoshape",
         "fill": "#efe6d6",
-        "stroke": "#6b4f3b",
-        "strokeWidth": 0.8
+        "stroke": "#8c7b6b",
+        "strokeWidth": 0.5
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {"state": "WA", "lon": 121, "lat": -26},
+          {"state": "NT", "lon": 133.5, "lat": -19},
+          {"state": "SA", "lon": 135, "lat": -30},
+          {"state": "QLD", "lon": 145, "lat": -22},
+          {"state": "NSW", "lon": 147.5, "lat": -32.5},
+          {"state": "VIC", "lon": 144.5, "lat": -37},
+          {"state": "TAS", "lon": 146.8, "lat": -42.2},
+          {"state": "ACT", "lon": 149.1, "lat": -35.4}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#d96c06"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "state",
+          "type": "nominal"
+        }
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {
+            "x": 140,
+            "y": 245
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "width": 150,
+        "height": 52,
+        "cornerRadius": 8,
+        "fill": "#fff8dc",
+        "stroke": "#8c7b6b",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": null
+        }
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {
+            "x": 140,
+            "y": 230,
+            "note": [
+              "Restaurant clusters are most visible",
+              "around major metropolitan areas",
+              "such as Sydney, Melbourne",
+              "and Brisbane."
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 8,
+        "fontWeight": "bold",
+        "align": "center",
+        "baseline": "middle",
+        "lineHeight": 10,
+        "color": "#6b4f3b"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": null
+        },
+        "text": {
+          "field": "note"
+        }
       }
     },
 
@@ -43,11 +144,17 @@
         }
       },
 
+      "transform": [
+        {
+          "calculate": "'Fast Food Restaurant'",
+          "as": "Category"
+        }
+      ],
+
       "mark": {
         "type": "circle",
         "size": 9,
-        "color": "#d97706",
-        "opacity": 0.28
+        "opacity": 0.9
       },
 
       "encoding": {
@@ -61,19 +168,31 @@
           "type": "quantitative"
         },
 
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Fast Food Restaurant"],
+            "range": ["#d97706"]
+          },
+          "legend": {
+            "title": "Location",
+            "orient": "bottom",
+            "offset": 20
+          }
+        },
+
         "tooltip": [
           {
             "field": "properties.name",
             "type": "nominal",
             "title": "Restaurant"
           },
-
           {
             "field": "properties.brand",
             "type": "nominal",
             "title": "Brand"
           },
-
           {
             "field": "properties.cuisine",
             "type": "nominal",
@@ -86,9 +205,12 @@
 
   "config": {
     "background": "#faeab4",
-
     "view": {
       "stroke": null
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 13
     }
   }
 }

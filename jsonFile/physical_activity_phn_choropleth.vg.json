@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": 580,
-  "height": 340,
+  "width": 560,
+  "height": 320,
 
   "data": {
     "url": "jsonFile/phn.geojson",
@@ -49,16 +49,17 @@
         "range": ["#bdbdbd", "#fee08b", "#d73027"]
       },
       "legend": {
-        "orient": "bottom",
+        "orient": "none",
+        "legendX": 185,
+        "legendY": 325,
         "direction": "horizontal",
-        "gradientLength": 180,
+        "gradientLength": 220,
         "gradientThickness": 18,
         "titleAnchor": "middle",
-        "titleOrient": "top",
-        "offset": 25,
-        "legendX": 250
+        "titleOrient": "top"
       }
     },
+
     "tooltip": [
       {
         "field": "properties.PHN_NAME",
@@ -74,20 +75,10 @@
     ]
   },
 
-    "config": {
+  "config": {
     "background": "transparent",
     "view": {
       "stroke": null
-    },
-    "legend": {
-      "orient": "bottom",
-      "direction": "horizontal",
-      "gradientLength": 220,
-      "gradientThickness": 18,
-      "titleAnchor": "middle",
-      "titleOrient": "top",
-      "offset": 15
-    }
     }
   }
-
+}

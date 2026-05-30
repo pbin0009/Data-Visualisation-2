@@ -61,7 +61,7 @@
 
             <!-- LEFT : SLIDESHOW -->
             <div class="overview-left slideshow">
-                <img src="images/chicken.png" class="slide active" alt="Burger illustration">
+                <img src="images/fastFood.png" class="slide active" alt="Burger illustration">
                 <img src="images/hamburgerManRed.png" class="slide" alt="Fast food illustration">
                 <img src="images/chicken.png" class="slide" alt="Burger illustration">
                 <img src="images/hamburgerManPink.png" class="slide" alt="Fast food illustration">
@@ -78,32 +78,93 @@
                 </p>
 
                 <div class="overview-interactive-area">
-                    <h3>Interactive Features</h3>
 
-                    <!-- Add buttons here later -->
+                    <h3>Click to Reveal Key Facts</h3>
+
+                    <div class="fact-card-container">
+
+                        <div class="fact-card" onclick="this.classList.toggle('revealed')">
+                            <div class="fact-front">
+                                ?
+                                <span>Click to reveal</span>
+                            </div>
+
+                            <div class="fact-back">
+                                <h4>Obesity Ranking</h4>
+                                <p>Australia ranks 58th in the world for obesity.</p>
+                            </div>
+                        </div>
+
+                        <div class="fact-card" onclick="this.classList.toggle('revealed')">
+                            <div class="fact-front">
+                                ?
+                                <span>Click to reveal</span>
+                            </div>
+
+                            <div class="fact-back">
+                                <h4>QSR Growth</h4>
+                                <p>As of 2025, 359 QSR restaurants have opened.</p>
+                            </div>
+                        </div>
+
+                        <div class="fact-card" onclick="this.classList.toggle('revealed')">
+                            <div class="fact-front">
+                                ?
+                                <span>Click to reveal</span>
+                            </div>
+
+                            <div class="fact-back">
+                                <h4>Fast Food Ranking</h4>
+                                <p>Australia ranked 9th globally for the number of fast food restaurants in 2024.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
 
         </section>
 
-        <!-- ================= FAST FOOD ACCESS PARAGRAPH ================= -->
-        <section class="fastfood-access-paragraph-section">
+<!-- ================= FAST FOOD ACCESS ================= -->
+<section class="fastfood-access-paragraph-section">
 
-            <div class="fastfood-access-paragraph-box">
+    <div class="fastfood-access-title">
+        <h2>Fast Food Access</h2>
+    </div>
 
-                <h2>Fast Food Access</h2>
+    <!-- LEFT -->
+    <div class="fastfood-access-paragraph-box">
 
-                <p>
-                    Fast food restaurants are highly concentrated around major cities and coastal areas,
-                    reflecting population density and urban food access. Popular chains such as
-                    McDonald's, KFC, and Hungry Jack's are commonly located near shopping centres,
-                    highways, and tourist areas due to high consumer demand.
-                </p>
 
-            </div>
+        <p>
+            Fast food restaurants are highly concentrated around Australia's major
+            cities and coastal regions, particularly along the east coast where
+            population density is highest. Large clusters can be observed around
+            Sydney, Melbourne, Brisbane, and Perth, while remote inland areas have
+            far fewer outlets. Popular chains such as McDonald's, KFC, and Hungry
+            Jack's are commonly located near shopping centres, highways, and tourist
+            destinations to meet consumer demand.
+        </p>
 
-        </section>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="fastfood-access-paragraph-box">
+
+        <p>
+                Burgers and sandwiches account for the largest share of Australia's
+                fast food market, followed by chicken and pizza-based outlets. These
+                food categories dominate because they are widely available, convenient,
+                and appeal to a broad range of consumers. Asian and Latin American
+                fast food outlets also contribute significantly to the market, with
+                popular chains such as Guzman y Gomez, Zambrero and Sushi Hub reflecting Australia's multicultural food preferences. 
+        </p>
+
+    </div>
+
+</section>
 
         <!-- ================= MAP + DONUT PIE SECTION ================= -->
         <section class="map-pie-section">
@@ -114,7 +175,7 @@
                 <h2>Fast Food Restaurant around Australia</h2>
 
                 <div id="dot-map"></div>
-
+            
             </div>
 
             <!-- RIGHT : DONUT PIE -->
@@ -128,19 +189,30 @@
 
         </section>
 
-        <!-- ================= FAST FOOD PARAGRAPH ================= -->
+        <!-- ================= FAST FOOD CONSUMPTION ================= -->
         <section class="fastfood-paragraph-section">
+
+            <div class="fastfood-consumption-title">
+                <h2>Fast Food Consumption</h2>
+            </div>
 
             <div class="fastfood-paragraph-box">
 
-                <h2>Fast Food Consumption</h2>
+                <p>
+                    The chart compares average monthly fast food spending across
+                    Australian states. New South Wales and Victoria show the highest average
+                    spending at $40 per month, while Tasmania records the lowest spending.
+                    The results suggest that fast food expenditure differs across states and
+                    may reflect variations in population size, income levels, and consumer
+                    preferences.
+                </p>
+
+            </div>
+
+            <div class="fastfood-paragraph-box">
 
                 <p>
-                    Fast food consumption patterns in Australia show strong demand for
-                    quick and accessible meals. Burgers and sandwiches dominate consumer
-                    choices, while meal deals and loyalty programs remain popular among
-                    regular customers. These behaviours highlight the growing role of
-                    fast food in everyday Australian lifestyles.
+                    QSR stands for Quick Service Restaurant, meaning fast food outlets focused on quick, convenient, and affordable meals. The chart shows that Australians most often buy chips and a drink with their meal, use mobile apps, and eat fast food at least once a week, highlighting the importance of convenience, meal bundles, and digital ordering.
                 </p>
 
             </div>
@@ -226,6 +298,27 @@
 
         </section>
 
+        <section class="obesity-insight-section">
+
+            <div class="obesity-insight-box">
+
+                <p>
+                    Severe obesity among adults has increased steadily since 1995,
+                    with females consistently recording slightly higher rates than
+                    males. Across age groups, overweight and obesity are most common
+                    among middle-aged adults (45-64 years), while younger adults
+                    aged 18-24 show the lowest prevalence.
+                </p>
+            </div>
+
+            <div class="obesity-insight-box">
+
+                <p>
+Although overweight prevalence declined between 2014-15 and 2017-18, AIHW reports that changes across this period were not statistically significant, suggesting the decrease may reflect normal survey variation rather than a substantial population-level improvement
+                </p>
+            </div>
+
+        </section>
         <!-- ================= AGE GROUP SECTION ================= -->
         <section class="agegroup-section">
 
@@ -236,7 +329,7 @@
 
                 <div class="dumbbell-legend">
 
-                    <span class="legend-obese"></span> Obese
+                    <span class="legend-obese"></span> Obesity
 
                     <span class="legend-overweight"></span> Overweight
 
@@ -249,14 +342,11 @@
             <!-- RIGHT : INSIGHT TEXT -->
             <div class="health-insight-box">
 
-                <h2>Health Insights</h2>
+                <p>
+                Young adults have a bigger difference between overweight and obesity rates, meaning many are above a healthy weight but not yet obese. As people get older, this gap gets smaller because obesity becomes more common. This pattern may be due to long term habits like unhealthy eating, frequent fast food consumption, and not getting enough exercise.
 
                 <p>
-                Severe obesity among adults has steadily increased from 1995 to 2022, with females showing slightly higher rates than males. Among children and adolescents, overweight remains far more common than obesity, though both have risen over time. Across age groups, overweight and obesity are highest among middle-aged adults (45-64), lowest among young adults aged 18-24, and remain relatively high in older age groups.
-                </p>
-
-                <p>
-                    The rising trends may reflect the effects of fast-food consumption and insufficient physical activity among Australians.
+                    Overall, these three charts show that fast food access, eating habits, and physical activity are strongly linked to obesity in Australia. The rise in overweight and obesity rates may be due to frequent fast food consumption and not enough exercise, highlighting the need for healthier lifestyle choices.
                 </p>
 
             </div>
@@ -268,7 +358,7 @@
 
             <!-- LEFT : TEXT -->
             <div class="bmi-text-box">
-                <h2>BMI Body Mass Index (BMI)</h2>
+                <h2>Body Mass Index (BMI)</h2>
                 <p>
                     
                     BMI is commonly used to estimate whether a person is
@@ -312,23 +402,28 @@
 
         </section>
 
-        <!-- ================= BMI VS OBESITY PARAGRAPH ================= -->
-        <section class="bmi-obesity-paragraph-section">
+<!-- ================= BMI and Obesity ================= -->
+<section class="BMIObesity-paragraph-section">
 
-            <div class="bmi-obesity-paragraph-box">
+    <h2>BMI and Obesity</h2>
 
-                <h2>BMI and Obesity</h2>
+    <div class="BMIObesity-paragraph-text-row">
 
-                <p>
-                    BMI classification helps show how Australians are distributed across
-                    weight categories such as underweight, normal, overweight, and obese.
-                    Comparing BMI patterns by sex provides clearer insight into obesity
-                    risks and differences in general health outcomes.
-                </p>
+        <div class="BMIObesity-paragraph-text-box">
+            <p>
+                Women have a higher proportion of individuals within the normal BMI range, while men are more likely to be overweight. Obesity is prevalent in both genders, indicating that excess weight remains a significant health concern among Australian adults.
+            </p>
+        </div>
 
-            </div>
+        <div class="BMIObesity-paragraph-text-box">
+            <p>
+                The heat map reveals that most Australian adults are concentrated within the overweight and obesity BMI ranges rather than the underweight categories. This trend is observed for both males and females, suggesting that excess weight remains a widespread public health issue across the adult population.
+            </p>
+        </div>
 
-        </section>
+    </div>
+
+</section>
 
         <!-- ================= BMI CHART SECTION ================= -->
         <section class="bmi-chart-section">
@@ -336,7 +431,7 @@
             <!-- LEFT : STACKED BAR CHART -->
             <div class="bmi-stacked-box">
 
-                <h2>BMI Classification Aged 18 and Over by Gender</h2>
+                <h2>BMI Classification Aged 18 and Over by Gender in 2022</h2>
 
                 <div id="bmi-stacked-bar-chart"></div>
 
@@ -345,7 +440,7 @@
             <!-- RIGHT : HEAT MAP -->
             <div class="bmi-heatmap-box">
 
-                <h2>BMI distribution of persons aged 18 and over</h2>
+                <h2>BMI distribution of persons aged 18 and over in 2022</h2>
 
                 <div id="bmi-heatmap-chart"></div>
 
@@ -354,31 +449,34 @@
         </section>
 
         <!-- ================= PHYSICAL ACTIVITY PARAGRAPH ================= -->
-        <section class="physical-activity-paragraph-section">
+        <section class="obesity-activity-section">
 
-            <div class="physical-activity-paragraph-box">
+            <h2>Obesity and Physical Activity</h2>
 
-                <h2>Obesity and Physical Activity</h2>
+            <div class="obesity-activity-text-row">
 
-                <p>
-                    Physical activity plays an important role in maintaining a healthy lifestyle
-                    and reducing obesity-related health risks. Areas with lower physical activity
-                    levels may face higher risks of poor health outcomes, as inactive lifestyles
-                    can contribute to weight gain, reduced fitness, and long-term chronic disease.
-                    This section explores physical inactivity patterns across Australian PHN areas.
-                </p>
+                <div class="obesity-activity-text-box">
+                    <p>
+                        Primary Health Networks (PHNs) are healthcare planning regions established to coordinate health services based on local population needs. Each PHN is identified by a specific PHN area code, and the boundaries are defined according to healthcare service regions rather than state borders. The map shows that physical inactivity levels differ across PHNs, suggesting that factors such as access to facilities, population characteristics, and lifestyle behaviours may influence activity levels.
+                    </p>
+                </div>
+
+                <div class="obesity-activity-text-box">
+                    <p>
+                        The chart shows the distribution of weekly physical activity among males and females. Although many adults achieved 150 or more minutes of activity, a considerable proportion reported no activity. Lower activity levels are associated with increased risks of overweight and obesity, highlighting the importance of regular exercise for maintaining good health.
+                    </p>
+                </div>
 
             </div>
 
         </section>
-
         <!-- ================= PHYSICAL ACTIVITY CHART SECTION ================= -->
         <section class="physical-activity-chart-section">
 
             <!-- LEFT : CHOROPLETH MAP -->
             <div class="physical-choropleth-box">
 
-                <h2>Physical Inactivity by PHN Area</h2>
+                <h2>Insufficient Weekly Physical Activity of Adults by PHN Area</h2>
 
                 <div id="choropleth-map"></div>
 
@@ -387,7 +485,7 @@
             <!-- RIGHT : BUTTERFLY BAR CHART -->
             <div class="physical-butterfly-box">
 
-                <h2>Physical Activity Comparison</h2>
+                <h2>Weekly Physical Activity Duration by Gender (2022)</h2>
 
                 <div id="butterfly-bar-chart"></div>
 
@@ -395,51 +493,115 @@
 
         </section>
 
-        <!-- ================= CONCLUSION SECTION ================= -->
-        <section class="conclusion-section">
+        <!-- ================= CONCLUSION + REFERENCES ================= -->
+        <section class="bottom-section">
 
-            <h2>Conclusion</h2>
+            <div class="conclusion-section">
 
-            <p>
-                Overall, this dashboard shows that fast food access, consumption habits,
-                obesity patterns, BMI distribution, and physical activity are closely
-                connected to public health outcomes in Australia. Areas with higher fast
-                food availability and lower physical activity may face greater health
-                risks, highlighting the importance of balanced diets, active lifestyles,
-                and stronger health awareness.
-            </p>
+                <h2>Conclusion</h2>
 
-        </section>
+                <p>
+                    Overall, this dashboard shows that fast food access, consumption habits,
+                    obesity patterns, BMI distribution, and physical activity are closely
+                    connected to public health outcomes in Australia. Areas with higher fast
+                    food availability and lower physical activity may face greater health
+                    risks, highlighting the importance of balanced diets, active lifestyles,
+                    and stronger health awareness.
+                </p>
+                <br>
+                <p>
+                    Dashboard by Puteri Binti Ainul Hasni - 36853577
+                </p>
 
-        <!-- ================= REFERENCES SECTION ================= -->
-        <section class="references-section">
+            </div>
 
-            <h2>References</h2>
+            <div class="references-section">
 
-            <ul>
-                <li>
-                    Australian Institute of Health and Welfare (AIHW) -
-                    <a href="https://www.aihw.gov.au/" target="_blank">
-                        https://www.aihw.gov.au/
-                    </a>
-                </li>
+                <h2>References</h2>
 
-                <li>
-                    Calculator.net BMI Calculator -
-                    <a href="https://www.calculator.net/bmi-calculator.html" target="_blank">
-                        https://www.calculator.net/bmi-calculator.html
-                    </a>
-                </li>
+                <ul>
 
-                <li>
-                    OECD Health Statistics -
-                    <a href="https://www.oecd.org/health/" target="_blank">
-                        https://www.oecd.org/health/
-                    </a>
-                </li>
-            </ul>
+    <li>
+        pbin0009. (2025). <i>Data-Visualisation-2</i> [Computer software]. GitHub.
+        <a href="https://github.com/pbin0009/Data-Visualisation-2" target="_blank">
+            View Source
+        </a>
+    </li>
 
-        </section>
+
+    <li>
+        Australian Government. (n.d.). <i>Primary Health Network (PHN) locator map</i>.
+        <a href="https://catalogue.data.infrastructure.gov.au/dataset/rdh-primary-health-network-phn-locator-map" target="_blank">
+            View Source
+        </a>
+    </li>
+
+    <li>
+        Australian Institute of Health and Welfare. (n.d.). <i>Overweight and obesity data</i>.
+        <a href="https://www.aihw.gov.au/reports-data/behaviours-risk-factors/overweight-obesity/data" target="_blank">
+            View Source
+        </a>
+    </li>
+
+    <li>
+        Canstar Blue. (n.d.). <i>Cheapest fast food in Australia</i>.
+        <a href="https://www.canstarblue.com.au/stores-services/cheapest-fast-foods/" target="_blank">
+            View Source
+        </a>
+    </li>
+
+    <li>
+        GapMaps. (2025). <i>2025 Australia annual fast food QSR report</i>.
+        <a href="https://www.gapmaps.com/2025-australia-annual-fast-food-qsr-report/" target="_blank">
+            View Source
+        </a>
+    </li>
+
+    <li>
+        Gupta, A. (n.d.). <i>How big is the fast food industry in Australia?</i>
+        <a href="https://www.linkedin.com/pulse/how-big-fast-food-industry-australia-ashina-gupta-xmwbc/" target="_blank">
+            View Source
+        </a>
+    </li>
+
+    <li>
+        OpenAI. (2025). <i>ChatGPT</i> [Large language model].
+        <a href="https://chatgpt.com/" target="_blank">
+            View Source
+        </a>
+    </li>
+
+    <li>
+        OpenStreetMap contributors. (2025). <i>OpenStreetMap</i> [Data set].
+        <a href="https://www.openstreetmap.org" target="_blank">
+            View Source
+        </a>
+    </li>
+
+    <li>
+        SciHub101. (n.d.). <i>Industries most disrupted by AI</i>.
+        <a href="https://scihub101.com/blog/industries-most-disrupted-by-ai" target="_blank">
+            View Source
+        </a>
+    </li>
+
+    <li>
+        Statista. (n.d.). <i>Key statistics on fast food consumption at quick service restaurants in Australia</i>.
+        <a href="https://www.statista.com/statistics/1410117/australia-key-statistics-on-fast-food-consumption-at-quick-service-restaurants/" target="_blank">
+            View Source
+        </a>
+    </li>
+
+    <li>
+        World Obesity Federation. (n.d.). <i>Global obesity rankings</i>.
+        <a href="https://data.worldobesity.org/rankings/?age=a&sex=t" target="_blank">
+            View Source
+        </a>
+    </li>
+
+</ul>
+
+            </div>
 
     </main>
     <script src="js/fastFood_vg.js"></script>

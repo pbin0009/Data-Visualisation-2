@@ -32,6 +32,7 @@
         }
       }
     },
+
     {
       "mark": {
         "type": "circle",
@@ -55,6 +56,7 @@
         ]
       }
     },
+
     {
       "mark": {
         "type": "circle",
@@ -78,6 +80,80 @@
           {"field": "Age group", "type": "nominal"},
           {"field": "Overweight", "type": "quantitative", "title": "Overweight (%)"}
         ]
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {
+            "x": 120,
+            "y": 120
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "width": 185,
+        "height": 55,
+        "cornerRadius": 8,
+        "fill": "#fff8dc",
+        "stroke": "#8c7b6b",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": null
+        }
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {
+            "x": 120,
+            "y": 100,
+            "note": [
+                "The wider gap among young adults",
+                "suggests overweight is more common",
+                "than obesity. As age increases,",
+                "obesity prevalence rises, reducing",
+                "the difference between categories."
+              ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 8,
+        "fontWeight": "bold",
+        "align": "center",
+        "baseline": "middle",
+        "lineHeight": 10,
+        "color": "#6b4f3b"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": null
+        },
+        "text": {
+          "field": "note"
+        }
       }
     }
   ],
